@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Organization</title>
+</head>
+<body>
+
+
+    <aside>
+        <nav class="sidebar_admin">
+            <span>Hello Admin</span>
+            <a href="/admin/dashboard_admin.html">Home</a>
+            <a href="/admin/list_of_organization_admin.html">Organization Management</a>
+            <a href="/index.html">Logout</a>
+        </nav>
+    </aside>
+
+    <div class="content">
+
+        <form enctype="multipart/form-data">
+
+            <h2>Update Organization details</h2>
+            
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="organization_id">Organization ID:</label>
+                    </td>
+                    <td>
+                        <div id="organization_id">Org ID1:</div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="organization_name">Organization name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="organization_name" id="organization_name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="director_name">Director name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="director_name" id="director_name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="username" id="username" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label> 
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="mobile_no">Mobile No:</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="mobile_no" id="mobile_no" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="website">Website URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="website" id="website" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="linkedin">LinkedIn Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="linkedin" id="linkedin" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="facebook">Facebook Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="facebook" id="facebook" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="instagram">Instagram Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="instagram" id="instagram" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="logo">Upload Logo:</label>
+                    </td>
+                    <td>
+                        <input type="file" accept="image/*" name="logo" id="logo" required>
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <!-- <input type="reset" value="Reset" name="reset"> -->
+
+        </form>
+        <a href="/admin/list_of_organization_admin.html"><button value="submit" name="submit">Submit</button></a>
+
+    
+    </div>
+
+    <footer>
+        
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+</html>

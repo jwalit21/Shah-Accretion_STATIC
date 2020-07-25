@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Login</title>
+</head>
+<body>
+
+    <header>
+
+        <nav class="topbar_login">
+            <!-- Logo of organization -->
+            <a href="/index.html">Back to the Main page</a>
+            <a href="/organization/login_organization.html">Organization Login</a>
+            <a href="/employee/login_employee.html">Employee Login</a>
+        </nav>
+
+    </header>
+
+    <div class="content">
+        <h3 id="success_message" class="success_message"></h3>
+
+        <form>
+
+            <h2>Employee Login</h2>
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="organization_id">Organization ID:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="organization_id" id="organization_id">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="username" id="username">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label> 
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <!-- <input type="reset" value="Reset" name="reset"> -->
+
+        </form>
+        <a href="/employee/dashboard_employee.html"><button value="submit" name="submit">Submit</button></a>
+
+        <div>
+            <nav>
+                <a href="/organization/login_organization.html">Organization Login</a>
+                <a href="/forgot_password.html">Forgot password</a>
+            </nav>
+        </div>
+    
+    </div>
+
+    <footer>
+        
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+</html>

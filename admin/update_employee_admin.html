@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+</head>
+<body>
+
+    <aside>
+
+        Side bar for admin<br>
+        <nav class="sidebar_admin">
+            <span>Hello Admin</span>
+            <a href="/admin/dashboard_admin.html">Home</a>
+            <a href="/admin/list_of_organization_admin.html">Organization Management</a>
+            <a href="/index.html">Logout</a>
+        </nav>
+
+    </aside>
+
+    <div class="content">
+
+        <form id="employee_form">
+
+            <h2>Update Employee details</h2>
+            
+            <h3 id="success_message" class="success_message"></h3>
+            <!--this is for success message after registration that your organization code is sent to your provided email-->
+
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="employee_id">Employee ID:</label>
+                    </td>
+                    <td>
+                        <label id="employee_id">Emp ID1</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="first_name">Firstname:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="first_name" id="first_name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="last_name">Lastname:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="last_name" id="last_name">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="email">Email:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="email" id="email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label> 
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="address">Address:</label>
+                    </td>
+                    <td>
+                        <textarea name="first_name" for="employee_form"></textarea>  
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="dob">Date of Birth:</label> 
+                    </td>
+                    <td>
+                        <input type="date" name="dob" id="dob">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="date_of_join">Date of Joining:</label> 
+                    </td>
+                    <td>
+                        <input type="date" name="date_of_join" id="date_of_join">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="blood_group">Blood group:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="blood_group" id="blood_group">
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+            <!-- <input type="reset" value="Reset" name="reset"> -->
+
+        </form>
+        <a href="/admin/list_of_employee_admin.html"><button value="submit" name="submit">Submit</button></a>
+        
+    
+    </div>
+
+    <footer>
+        
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Management</title>
+</head>
+
+<body>
+
+    <aside>
+        <nav class="sidebar_admin">
+            <span>Hello Admin</span>
+            <a href="/admin/dashboard_admin.html">Home</a>
+            <a href="/admin/list_of_organization_admin.html">Organization Management</a>
+            <a href="/index.html">Logout</a>
+        </nav>
+    </aside>
+
+    <div class="content">
+
+        <!-- admin only can see this -->
+        <div><button class="organization_new" id="organization_new">New Organization</button></div>
+        <table>
+            <tr>
+
+                <th>Organization ID</th>
+                <th>Organization name</th>
+                <th>Manage Employees</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            <tr>
+                <!-- do it same for row-->
+                <td>Org Id1</td>
+                <td>XYZ</td>
+                <td>
+                    <a href="/admin/list_of_employee_admin.html"><button value="employee_manage" name="employee_manage">Employees</button></a>
+                </td>
+                <td>
+                    <a href="/admin/update_organization_admin.html"><button value="update" name="update" >Update</button></a>
+                </td>
+
+                <td>
+                    <a><button value="delete" name="delete" >Delete</button></a>
+                </td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <footer>
+
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us
+            <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+
+</html>

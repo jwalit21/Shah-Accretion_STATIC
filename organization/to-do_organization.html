@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary-role</title>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <!-- all information of organization -->
+            <!-- Logo of organization -->
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+    </header>
+
+    <aside>
+
+        <nav class="sidebar_employee">
+            <span>Hello Orgnization</span>
+            <a href="/organization/dashboard_organization.html">Home</a>
+            <a href="/organization/list_of_employee_organization.html">Employee</a>
+            <a href="/organization//salary-role_organization.html">Salary-Role Schema</a>
+            <a href="/organization/to-do_organization.html">To-Do</a>
+            <a href="#">FAQs-Feedback</a>
+            <a href="#">General Forrum</a>
+            <a href="/organization/update_organization_organization.html">Orgnization profile</a>
+            <a href="/index.html">Logout</a>
+        </nav>
+
+    </aside>
+
+    <div class="content">
+
+
+        
+
+            <h3>Assign To-dos</h3>
+
+            <h3 id="success_message" class="success_message"></h3>
+            <!--this is for success message after registration that your organization code is sent to your provided email-->     
+            <form id="to-do_form">
+
+                <table>
+
+                    <tr>
+                        <td>
+                            <label for="employee_select">Employee:</label>
+                        </td>
+                        <td>
+                            <select id="employee_select" name="employee_select">
+                                <option value="xyz1">xyz11</option>
+                                <option value="xyz12">xyz12</option>
+                                <option value="xyz13">xyz13</option>
+                                <option value="xyz14">xyz14</option>
+                            </select>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="to-do">To-Do:</label>
+                        </td>
+                        <td>
+                            <textarea id="to-do" name="to-do" for="to-do_form"></textarea>  
+                        </td>                        
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label for="deadline">Deadline:</label> 
+                        </td>
+                        <td>
+                            <input type="date" name="deadline" id="deadline">
+                        </td>
+                    </tr>
+
+                </table>
+
+                <!-- <input type="reset" value="Reset" name="reset"> -->
+
+            </form>
+            <a href="/organization/dashboard_organization.html" ><button value="submit" name="submit">Submit</button></a>
+            
+
+
+
+    </div>
+
+    <footer>
+
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us
+            <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+
+</html>

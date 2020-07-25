@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Login</title>
+</head>
+<body>
+
+    <header>
+
+        <nav class="topbar_login">
+            <!-- Logo of organization -->
+            <a href="/index.html">Back to the Main page</a>
+            <a href="/organization/login_organization.html">Organization Login</a>
+            <a href="/employee/login_employee.html">Employee Login</a>
+        </nav>
+
+    </header>
+
+    <div class="content">
+
+        <form enctype="multipart/form-data">
+
+            <h2>Organization Registration</h2>
+            
+            <h3 id="success_message" class="success_message"></h3>
+            <!--this is for success message after registration that your organization code is sent to your provided email-->
+
+            <table>
+
+                <tr>
+                    <td>
+                        <label for="organization_name">Organization name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="organization_name" id="organization_name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="director_name">Director name:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="director_name" id="director_name" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="username">Username:</label>
+                    </td>
+                    <td>
+                        <input type="email" name="username" id="username" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="password">Password:</label> 
+                    </td>
+                    <td>
+                        <input type="password" name="password" id="password" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="mobile_no">Mobile No:</label>
+                    </td>
+                    <td>
+                        <input type="tel" name="mobile_no" id="mobile_no" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="website">Website URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="website" id="website" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="linkedin">LinkedIn Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="linkedin" id="linkedin" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="facebook">Facebook Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="facebook" id="facebook" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="instagram">Instagram Profile URL:</label>
+                    </td>
+                    <td>
+                        <input type="url" name="instagram" id="instagram" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label for="logo">Upload Logo:</label>
+                    </td>
+                    <td>
+                        <input type="file" accept="image/*" name="logo" id="logo" required>
+                    </td>
+                </tr>
+
+            </table>
+            <br>
+
+            
+        </form>
+        <a href="/organization/dashboard_organization.html"><button value="submit" name="submit">Submit</button></a>
+            <!-- <input type="reset" value="Reset" name="reset"> -->
+
+        <div>
+            <nav>
+                <a href="/organization/login_organization.html">Organization Login</a>
+                <a href="/employee/login_employee.html">Employee Login</a>
+            </nav>
+        </div>
+    
+    </div>
+
+    <footer>
+        
+        <!-- Logo of website in center of the page -->
+
+        <p>Follow us <!-- wesite name --> on these websites</p>
+        <nav>
+            <a href="#">Website</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+            <a href="#">facebook</a>
+        </nav>
+        <p>© Copyright 2020. All Rights Reserved.</p>
+        <p>Developer: Jwalit Shah</p>
+    </footer>
+
+</body>
+</html>
