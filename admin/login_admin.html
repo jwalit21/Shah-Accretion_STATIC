@@ -1,71 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin panel Login</title>
 </head>
+
 <body>
 
-    <header>
+    <nav id="top_navbar">
+        <ul>
+            <li class="left_nav"><a href="#"><img class="logo" src="/images/mainlogo.png"></a></li>
+            <li class="left_nav active"><a href="/index.html">Back to the Main page</a></li>
+            <li class="left_nav"><a href="/organization/login_organization.html">Organization Login</a></li>
+            <li class="left_nav"><a href="/employee/login_employee.html">Employee Login</a></li>
+        </ul>
+    </nav>
 
-        <nav class="topbar_login">
-            <!-- Logo of organization -->
-            <a href="/index.html">Back to the Main page</a><br>
-            <a href="/organization/login_organization.html">Organization Login</a><br>
-            <a href="/employee/login_employee.html">Employee Login</a><br>
-        </nav>
+    <div id="wrapper">
 
-    </header>
+        <div class="main">
+            <p class="msg1" align="center">Admin Login</p>
+            <form class="form1">
+                <input class="us" type="text" align="center" placeholder="Username / Email">
+                <input class="pass" type="password" align="center" placeholder="Organization ID">
+                <a class="submit" href="/organization/dashboard_organization.html" align="center">Submit</a>
+                <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
+            </form>
+            <p class="org_Registration inner_nav" style="margin-top: 30px;"><a
+                    href="/organization/register_organization.html">New Organization? Register here</a></p>
+            <p class="emp_Login inner_nav"><a href="/employee/login_employee.html">Employee Login</a></p>
+        </div>
 
-    <div class="content">
-
-        <form>
-
-            <h2>Admin Login</h2>
-            <table>
-
-                <tr>
-                    <td>
-                        <label for="username">Username:</label>
-                    </td>
-                    <td>
-                        <input type="text" name="username" id="username">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="password">Password:</label> 
-                    </td>
-                    <td>
-                        <input type="password" name="password" id="password">
-                    </td>
-                </tr>
-
-            </table>
-            <br>
-            <!-- <input type="reset" value="Reset" name="reset"> -->
-
-        </form>
-        <a href="/admin/dashboard_admin.html"><button value="submit" name="submit">Submit</button></a>
 
     </div>
 
     <footer>
-        
-        <!-- Logo of website in center of the page -->
 
-        <p>Follow us <!-- wesite name --> on these websites</p>
-        <nav>
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-        <p>© Copyright 2020. All Rights Reserved.</p>
-        <p>Developer: Jwalit Shah</p>
+        <div>
+            <img id="footer_logo" src="/images/mainlogo.png">
+        </div>
+
+        <div id="footer_content">
+            <p class="footer_content_center">Follow us on these websites</p>
+            <div id="footer_links">
+                <a href="#"><i class="fa fa-user-circle-o" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-facebook" style="color: white;"></i></a>
+            </div>
+            <div class="footer_content_center">
+                <p>© Copyright 2020. All Rights Reserved.</p>
+                <p>Developer: Jwalit Shah</p><br>
+            </div>
+        </div>
     </footer>
 
 </body>
+
 </html>

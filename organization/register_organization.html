@@ -14,7 +14,7 @@
 
     <header>
 
-        <nav>
+        <nav id="top_navbar">
             <ul>
                 <li class="left_nav"><a href="#"><img class="logo" src="/images/mainlogo.png"></a></li>
                 <li class="left_nav active"><a href="/index.html">Back to the Main page</a></li>
@@ -25,120 +25,28 @@
 
     </header>
 
-    <div class="content">
-
-        <form enctype="multipart/form-data">
-
-            <h2>Organization Registration</h2>
-
-            <h3 id="success_message" class="success_message"></h3>
-            <!--this is for success message after registration that your organization code is sent to your provided email-->
-
-            <table>
-
-                <tr>
-                    <td>
-                        <label for="organization_name">Organization name:</label>
-                    </td>
-                    <td>
-                        <input type="text" name="organization_name" id="organization_name" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="director_name">Director name:</label>
-                    </td>
-                    <td>
-                        <input type="text" name="director_name" id="director_name" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="username">Username:</label>
-                    </td>
-                    <td>
-                        <input type="email" name="username" id="username" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="password">Password:</label>
-                    </td>
-                    <td>
-                        <input type="password" name="password" id="password" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="mobile_no">Mobile No:</label>
-                    </td>
-                    <td>
-                        <input type="tel" name="mobile_no" id="mobile_no" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="website">Website URL:</label>
-                    </td>
-                    <td>
-                        <input type="url" name="website" id="website" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="linkedin">LinkedIn Profile URL:</label>
-                    </td>
-                    <td>
-                        <input type="url" name="linkedin" id="linkedin" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="facebook">Facebook Profile URL:</label>
-                    </td>
-                    <td>
-                        <input type="url" name="facebook" id="facebook" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="instagram">Instagram Profile URL:</label>
-                    </td>
-                    <td>
-                        <input type="url" name="instagram" id="instagram" required>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="logo">Upload Logo:</label>
-                    </td>
-                    <td>
-                        <input type="file" accept="image/*" name="logo" id="logo" required>
-                    </td>
-                </tr>
-
-            </table>
-            <br>
+    <div id="wrapper">
 
 
-        </form>
-        <a href="/organization/dashboard_organization.html"><button value="submit" name="submit">Submit</button></a>
-        <!-- <input type="reset" value="Reset" name="reset"> -->
-
-        <div>
-            <nav>
-                <a href="/organization/login_organization.html">Organization Login</a>
-                <a href="/employee/login_employee.html">Employee Login</a>
-            </nav>
+        <div class="main" style="width: 50%;">
+            <p class="msg1" align="center">Organization Registration</p>
+            <form class="form1" enctype="multipart/form-data">
+                <input class="org_name" type="text" placeholder="Organization name">
+                <input class="dir_name" type="text" placeholder="Director name"> 
+                <input class="us" type="text" align="center" placeholder="Username / Email">
+                <input class="pass" type="password" align="center" placeholder="Organization ID">
+                <input class="mob" type="text" placeholder="Mobile number">
+                <input class="web_link" type="url" placeholder="Website address">
+                <input class="facebook_link" type="url" placeholder="Facebook profile address">
+                <input class="linkedin_link" type="url" placeholder="LinkedIn profile address">
+                <input class="instagram_link" type="url" placeholder="Instagram profile address">
+                <input class="org_logo" type="file" placeholder="Upload company Logo"><br><br>
+                <a class="submit" href="/organization/dashboard_organization.html" align="center">Submit</a><br><br>
+                <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
+            </form>
+            <p class="org_Registration inner_nav" style="margin-top: 30px;"><a
+                    href="/organization/login_organization.html">Organization Login</a></p>
+            <p class="emp_Login inner_nav"><a href="/employee/login_employee.html">Employee Login</a></p>
         </div>
 
     </div>

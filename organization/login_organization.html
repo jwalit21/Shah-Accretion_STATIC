@@ -12,9 +12,7 @@
 
 <body>
 
-    <header>
-
-        <nav>
+        <nav id="top_navbar">
             <ul>
                 <li class="left_nav"><a href="#"><img class="logo" src="/images/mainlogo.png"></a></li>
                 <li class="left_nav active"><a href="/index.html">Back to the Main page</a></li>
@@ -23,9 +21,8 @@
             </ul>
         </nav>
 
-    </header>
 
-    <div class="content">
+    <div id="wrapper">
 
         <div class="main">
             <p class="msg1" align="center">Organization Login</p>
@@ -35,19 +32,11 @@
                 <a class="submit" href="/organization/dashboard_organization.html" align="center">Submit</a>
                 <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
             </form>
-        <p class="org_Registration" style="margin-top: 30px;" align="center"><a href="/organization/register_organization.html">New Organization? Register here</a></p>
-        <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password</a></p>
-        <p class="emp_Login" align="center"><a href="/employee/login_employee.html">Employee Login</a></p>
+        <p class="org_Registration inner_nav" style="margin-top: 30px;"><a href="/organization/register_organization.html">New Organization? Register here</a></p>
+        <p class="forgot inner_nav"><a href="/forgot_password.html">Forgot Password</a></p>
+        <p class="emp_Login inner_nav"><a href="/employee/login_employee.html">Employee Login</a></p>
         </div>
-        <a href="/organization/dashboard_organization.html"><button value="submit" name="submit">Submit</button></a>
-
-        <div>
-            <nav>
-                <a href="/organization/register_organization.html">New Organization? Register here</a>
-                <a href="/forgot_password.html">Forgot Password</a>
-                <a href="/employee/login_employee.html">Employee Login</a>
-            </nav>
-        </div>
+        
 
     </div>
 
