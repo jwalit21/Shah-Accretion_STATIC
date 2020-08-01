@@ -1,54 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main_login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <title>Organization Registration</title>
 </head>
+
 <body>
 
     <header>
 
-        <nav class="topbar_login">
-            <!-- Logo of organization -->
-            <a href="/index.html">Back to the Main page</a><br>
-            <a href="/organization/register_organization.html">Organization Registration</a><br>
-            <a href="/employee/login_employee.html">Employee Login</a><br>
+        <nav>
+            <ul>
+                <li class="left_nav"><a href="#"><img class="logo" src="/images/mainlogo.png"></a></li>
+                <li class="left_nav active"><a href="/index.html">Back to the Main page</a></li>
+                <li class="left_nav"><a href="/organization/login_organization.html">Organization Login</a></li>
+                <li class="left_nav"><a href="/employee/login_employee.html">Employee Login</a></li>
+            </ul>
         </nav>
 
     </header>
 
     <div class="content">
 
-        <form>
-
-            <h2>Organization Login</h2>
-
-            <table>
-
-                <tr>
-                    <td>
-                        <label for="username">Email:</label>
-                    </td>
-                    <td>
-                        <input type="email" name="username" id="username">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>
-                        <label for="password">Password:</label> 
-                    </td>
-                    <td>
-                        <input type="password" name="password" id="password">
-                    </td>
-                </tr>
-
-            </table>
-            <br>
-
-
-        </form>
+        <div class="main">
+            <p class="msg1" align="center">Organization Login</p>
+            <form class="form1">
+                <input class="us" type="text" align="center" placeholder="Username / Email">
+                <input class="orgId" type="text" align="center" placeholder="Organization ID">
+                <a class="submit" href="/organization/dashboard_organization.html" align="center">Submit</a>
+                <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
+            </form>
+        <p class="org_Registration" style="margin-top: 30px;" align="center"><a href="/organization/register_organization.html">New Organization? Register here</a></p>
+        <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password</a></p>
+        <p class="emp_Login" align="center"><a href="/employee/login_employee.html">Employee Login</a></p>
+        </div>
         <a href="/organization/dashboard_organization.html"><button value="submit" name="submit">Submit</button></a>
 
         <div>
@@ -58,23 +48,30 @@
                 <a href="/employee/login_employee.html">Employee Login</a>
             </nav>
         </div>
-    
+
     </div>
 
     <footer>
-        
-        <!-- Logo of website in center of the page -->
 
-        <p>Follow us <!-- wesite name --> on these websites</p>
-        <nav>
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-        <p>© Copyright 2020. All Rights Reserved.</p>
-        <p>Developer: Jwalit Shah</p>
+        <div>
+            <img id="footer_logo" src="/images/mainlogo.png">
+        </div>
+
+        <div id="footer_content">
+            <p class="footer_content_center">Follow us on these websites</p>
+            <div id="footer_links">
+                <a href="#"><i class="fa fa-user-circle-o" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-facebook" style="color: white;"></i></a>
+            </div>
+            <div class="footer_content_center">
+                <p>© Copyright 2020. All Rights Reserved.</p>
+                <p>Developer: Jwalit Shah</p><br>
+            </div>
+        </div>
     </footer>
 
 </body>
+
 </html>

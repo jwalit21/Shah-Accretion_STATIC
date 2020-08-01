@@ -1,0 +1,196 @@
+*{
+    /* padding: 0;
+    margin: 0; */
+    text-decoration: none;
+    list-style: none;
+    /* box-sizing: border-box; */
+}
+
+@media screen and (max-width: 1600px) {
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #003542;
+    }
+
+
+    .right_nav {
+        float: right;
+    }
+
+    .left_nav {
+        float: left;
+    }
+
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        font-size: 17px;
+        padding: 24px 16px;
+        text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+        background-color: #014353;
+    }
+
+    .active {
+        background-color: #025368d7;
+    }
+
+    .logo {
+        overflow: hidden;
+        width: 40px;
+        height: 16px;
+    }
+
+    footer {
+        width: 100%;
+        background-color: #1D2B36;
+        color: white;
+        justify-content: center;
+    }
+
+    #footer_logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    #footer_links {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #footer_links>a {
+        padding: 9px;
+    }
+
+    .footer_content_center {
+        text-align: center;
+    }
+
+    .main {
+        background-color: #FFFFFF;
+        width: 400px;
+        height: auto ;
+        padding-bottom: 3em;
+        margin: 7em auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.44);
+    }
+
+    .msg1 {
+        padding-top: 40px;
+        margin-bottom: 0;
+        color: #165c85;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 23px;
+    }
+
+    .msg2 {
+        padding-top: 10px;
+        margin-bottom: 0;
+        color: #165c85;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 15px;
+    }
+
+    .token, .pass , .us , .orgId {
+        width: 76%;
+        color: rgb(38, 50, 56);
+        font-weight: 700;
+        font-size: 14px;
+        letter-spacing: 1px;
+        background: rgba(136, 126, 126, 0.04);
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        box-sizing: border-box;
+        border: 2px solid rgba(0, 0, 0, 0.08);
+        margin-bottom: 50px;
+        margin-left: 46px;
+        text-align: center;
+        margin-bottom: 27px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    form.form1 {
+        padding-top: 40px;
+    }
+
+
+    .token:focus,
+    .pass:focus ,
+    .us:focus,
+    .orgId:focus{
+        border: 2px solid rgba(0, 0, 0, 0.18) !important;
+
+    }
+
+    .submit {
+        cursor: pointer;
+        border-radius: 1em;
+        color: #fff;
+        background: linear-gradient(to right, #003452, #0b679c);
+        border: 0;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-family: 'Ubuntu', sans-serif;
+        margin-left:35%;
+        font-size: 13px;
+        box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
+    }
+
+    .forgot, .org_Registration, .emp_Login , .org_Login{
+        /* text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #f1f1f1; */
+        padding: 12px;
+        background-color: #034b75;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .forgot > a, .org_Registration > a, .emp_Login > a , .org_Login > a{
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #ffffff; 
+    }
+
+    a {
+        text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+        color: #003452;
+        text-decoration: none
+    }
+
+    a:hover{
+        color: #d0e7f5;
+    }
+
+    @media (max-width: 600px) {
+        .main {
+            border-radius: 0px;
+        }
+    }
+
+}
+
+
+
+
+
+
+@media screen and (max-width:685px) {
+    ul li {
+        width: 100%;
+    }
+}

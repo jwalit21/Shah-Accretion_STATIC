@@ -3,88 +3,103 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <title>Home</title>
 </head>
 
 <body>
-    <header>
-        <nav class="topbar_index">
-            <a href="#"><img src="images/logo1.png"></a><br>
-            <a href="#">Home</a><br>
-            <a href="#">Contact</a><br>
-            <a href="#">About</a><br>
-            <a href="organization/register_organization.html">Organization Registration</a><br>
-            <a href="organization/login_organization.html">Organization Login</a><br>
-            <a href="employee/login_employee.html">Employee Login</a><br>
-        </nav>
-    </header>
 
-    <aside>
-        <!-- of Website which is static -->
-        <nav class="sidebar_index">
-            <a href="https:\\www.ddu.ac.in">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-    </aside>
+    <nav>
+        <ul>
+            <li class="left_nav"><a href="#"><img class="logo" src="images/mainlogo.png"></a></li>
+            <li class="left_nav active"><a href="#">Home</a></li>
+            <li class="left_nav"><a href="#">Contact</a></li>
+            <li class="left_nav"><a href="#">About</a></li>
+            <li class="right_nav"><a href="organization/register_organization.html">Organization Registration</a>
+            </li>
+            <li class="right_nav"><a href="organization/login_organization.html">Organization Login</a></li>
+            <li class="right_nav"><a href="employee/login_employee.html">Employee Login</a></li>
+        </ul>
+    </nav>
 
-    <div class="content">
-        <h2>This is the index page</h2>
-
-        <p>
-            Description of website
-        </p>
-
-        <div>
-
-            <h3>
-                What we provide
-            </h3>
-
-            <div>
-                <h4>
-                    Functionality 1
-                </h4>
-                <div>
-                    <!-- image of functionality -->
-                    <p>
-                        description
-                    </p>
-                </div>
-            </div>
-
-            <div>
-                <h4>
-                    Functionality 2
-                </h4>
-                <div>
-                    <!-- image of functionality -->
-                    <p>
-                        description
-                    </p>
-                </div>
-            </div>
-
+    <div id="wrapper">
+        <div class="sticky_sidebar">
+            <nav class="sidebar_index">
+                <a href="#"><i class="fa fa-user-circle-o" style="color:black;"></i></a>
+                <a href="#"><i class="fa fa-linkedin" style="color: black;"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="color: black;"></i></a>
+                <a href="#"><i class="fa fa-facebook" style="color: black;"></i></a>
+            </nav>
         </div>
 
+        <div class="content">
+            <h2>This is the index page</h2>
 
+            <p>
+                Description of website
+            </p>
+
+            <div>
+
+                <h3>
+                    What we provide
+                </h3>
+
+                <div>
+                    <h4>
+                        Functiony 1
+                    </h4>
+                    <div>
+                        <!-- image of functiony -->
+                        <p>
+                            description
+                        </p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4>
+                        Functiony 2
+                    </h4>
+                    <div>
+                        <!-- image of functiony -->
+                        <p>
+                            description
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <br><br><br><br><br>vfvdfd<br><br><br><br><br><br><br><br><br>fdbdfb
+            <br><br><br>sd<br> -->
+
+
+        </div>
+        <br>
+        <footer>
+
+            <!-- Logo of website in center of the page -->
+            <div>
+                <img id="footer_logo" src="/images/mainlogo.png">
+            </div>
+
+            <div id="footer_content">
+                <p class="footer_content_center">Follow us on these websites</p>
+                <div id="footer_links">
+                    <a href="#"><i class="fa fa-user-circle-o" style="color: white;"></i></a>
+                    <a href="#"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                    <a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+                    <a href="#"><i class="fa fa-facebook" style="color: white;"></i></a>
+                </div>
+                <div class="footer_content_center">
+                    <p>© Copyright 2020. All Rights Reserved.</p>
+                    <p>Developer: Jwalit Shah</p><br>
+                </div>
+            </div>
+        </footer>
     </div>
-    <br>
-    <footer>
-        
-        <!-- Logo of website in center of the page -->
-
-        <p>Follow us <!-- wesite name --> on these websites</p>
-        <nav>
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-        <p>© Copyright 2020. All Rights Reserved.</p>
-        <p>Developer: Jwalit Shah</p>
-    </footer>
 
 </body>
 
