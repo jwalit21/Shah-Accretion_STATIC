@@ -1,4 +1,4 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -8,21 +8,53 @@
 
 @media screen and (max-width: 1600px) {
 
-    .inner_nav{
+    table {
+        width: 94%;
+        margin-top: 4%;
+        margin-bottom: 3%;
+        margin-left: 6%;
+        overflow: hidden;
+    }
+
+    .th{
+        background-color: #003452;
+        color: white;
+    }
+
+    td {
+        text-align: left;
+        padding: 8px;
+    }
+
+    td:nth-child(even) {
+        background-color: #fcf3f3;
+    }
+
+    .th:nth-child(odd) {
+        background-color: #02456b;
+    }
+
+    td:nth-child(even) {
+        background-color:  #f3f0f0;
+    }
+
+
+
+    .inner_nav {
         margin: 1%;
     }
 
-    #top_navbar{
+    #top_navbar {
         margin-top: 1.9px;
     }
 
-    #wrapper{
-        background-color:rgb(252, 179, 166);
+    #wrapper {
+        background-color: rgb(252, 179, 166);
         margin-top: 0.15%;
         padding: 5%;
     }
 
-    .form1 > a{
+    .form1>a {
         margin-top: 50%;
     }
 
@@ -96,7 +128,7 @@
     .main {
         background-color: #FFFFFF;
         width: 30%;
-        height: auto ;
+        height: auto;
         padding-bottom: 3em;
         margin: 0 auto;
         border-radius: 1.5em;
@@ -104,7 +136,7 @@
     }
 
     .msg1 {
-        padding-top: 40px;
+        padding-top: 4%;
         margin-bottom: 0;
         color: #165c85;
         font-family: 'Ubuntu', sans-serif;
@@ -121,7 +153,18 @@
         font-size: 15px;
     }
 
-    .token, .org_name, .dir_name , .mob, .web_link, .facebook_link , .linkedin_link , .org_logo, .instagram_link , .pass , .us , .orgId {
+    .token,
+    .org_name,
+    .dir_name,
+    .mob,
+    .web_link,
+    .facebook_link,
+    .linkedin_link,
+    .org_logo,
+    .instagram_link,
+    .pass,
+    .us,
+    .orgId {
         width: 80%;
         color: rgb(38, 50, 56);
         font-weight: 700;
@@ -146,10 +189,14 @@
     }
 
 
+    .form1 {
+        padding-top: 40px;
+    }
+
     .token:focus,
-    .pass:focus ,
+    .pass:focus,
     .us:focus,
-    .orgId:focus{
+    .orgId:focus {
         border: 2px solid rgba(0, 0, 0, 0.18) !important;
 
     }
@@ -165,12 +212,15 @@
         padding-bottom: 10px;
         padding-top: 10px;
         font-family: 'Ubuntu', sans-serif;
-        margin-left:26%;
+        margin-left: 26%;
         font-size: 13px;
         box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.04);
     }
 
-    .forgot, .org_Registration, .emp_Login , .org_Login{
+    .forgot,
+    .org_Registration,
+    .emp_Login,
+    .org_Login {
         /* text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
         color: #f1f1f1; */
         padding: 12px;
@@ -179,9 +229,12 @@
         justify-content: center;
     }
 
-    .forgot > a, .org_Registration > a, .emp_Login > a , .org_Login > a{
+    .forgot>a,
+    .org_Registration>a,
+    .emp_Login>a,
+    .org_Login>a {
         text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
-        color: #ffffff; 
+        color: #ffffff;
     }
 
     a {
@@ -190,24 +243,49 @@
         text-decoration: none
     }
 
-    a:hover{
+    a:hover {
         color: #d0e7f5;
-    }
-
-    @media (max-width: 600px) {
-        .main {
-            border-radius: 0px;
-        }
     }
 
 }
 
 
+@media screen and (max-width:1085px) {
+    .main {
+        background-color: #FFFFFF;
+        width: 50%;
+        height: auto;
+        padding-bottom: 3em;
+        margin: 0 auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.44);
+    }
+}
 
+@media screen and (max-width:1200px) {
+    .main {
+        background-color: #FFFFFF;
+        width: 50%;
+        height: auto;
+        padding-bottom: 3em;
+        margin: 0 auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.44);
+    }
+}
 
 
 
 @media screen and (max-width:685px) {
+    .main {
+        background-color: #FFFFFF;
+        width: 70%;
+        height: auto;
+        padding-bottom: 3em;
+        margin: 0 auto;
+        border-radius: 1.5em;
+        box-shadow: 0px 11px 35px 2px rgba(0, 0, 0, 0.44);
+    }
     ul li {
         width: 100%;
     }

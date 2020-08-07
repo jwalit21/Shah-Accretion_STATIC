@@ -8,7 +8,10 @@
     <link rel="stylesheet" type="text/css" href="/css/main_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="/js/organization_registration.js"></script>
+    
 </head>
+
 
 <body>
 
@@ -25,23 +28,28 @@
 
     </header>
 
+
     <div id="wrapper">
 
 
-        <div class="main" style="width: 50%;">
+        <div class="main">
+            <p class="msg1" id="success_after_registration1" align="center"></p>
+            <p class="msg1" align="center"></p>
             <p class="msg1" align="center">Organization Registration</p>
             <form class="form1" enctype="multipart/form-data">
-                <input class="org_name" type="text" placeholder="Organization name">
-                <input class="dir_name" type="text" placeholder="Director name"> 
-                <input class="us" type="text" align="center" placeholder="Username / Email">
-                <input class="pass" type="password" align="center" placeholder="Organization ID">
-                <input class="mob" type="text" placeholder="Mobile number">
-                <input class="web_link" type="url" placeholder="Website address">
-                <input class="facebook_link" type="url" placeholder="Facebook profile address">
-                <input class="linkedin_link" type="url" placeholder="LinkedIn profile address">
-                <input class="instagram_link" type="url" placeholder="Instagram profile address">
-                <input class="org_logo" type="file" placeholder="Upload company Logo"><br><br>
-                <a class="submit" href="/organization/dashboard_organization.html" align="center">Submit</a><br><br>
+                <input class="org_name" id="org_name" type="text" placeholder="Organization name" required>
+                <input class="dir_name" id="dir_name" type="text" placeholder="Director name" required> 
+                <input class="us" id="us" type="email" align="center" name="email" placeholder="Username / Email" required>
+                <input class="pass" id="pass" type="password" align="center" placeholder="Password" required>
+                <input class="mob" id="mob" type="tel" name="phone" placeholder="Mobile number" required>
+                <input class="web_link" id="web_link" type="url" pattern="https?://.+" placeholder="Website address" name="url" required>
+                <input class="facebook_link" id="facebook_link" type="url" pattern="https?://.+" placeholder="Facebook profile address" name="url" required>
+                <input class="linkedin_link" id="linkedin_link" type="url" pattern="https?://.+" placeholder="LinkedIn profile address" name="url" required>
+                <input class="instagram_link" id="instagram_link" type="url" pattern="https?://.+" placeholder="Instagram profile address" name="url" required>
+                <input class="org_logo" type="file" id="org_logo" placeholder="Upload company Logo" required><br><br>
+                <input align="center" onclick="submit_organization_registration()" class="submit" type="submit" value="submit with js"><br><br>
+                <a class="submit" href="/organization/dashboard_organization.html" align="center">go without Js</a>
+
                 <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
             </form>
             <p class="org_Registration inner_nav" style="margin-top: 30px;"><a
@@ -49,7 +57,69 @@
             <p class="emp_Login inner_nav"><a href="/employee/login_employee.html">Employee Login</a></p>
         </div>
 
+        <div id="information_div" class="main" style="width: 80%; margin-top: 5%">
+            <p class="msg1" id="success_after_registration2" align="center"></p>
+            <p class="msg1" align="center">Details of Organization</p>
+            <table>
+                <tr>
+                    <td class="th">Organization name</td>
+                    <td id="org_name_display">
+                        Fullname of Organization
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Director name</td>
+                    <td id="dir_name_display">
+                        Director name
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Email</td>
+                    <td id="email_display">
+                        Email
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Mobile number</td>
+                    <td id="mob_display">
+                        Mobile number
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Company's website</td>
+                    <td id="website_display">
+                        website
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Facebook link</td>
+                    <td id="facebook_display">
+                        facebook
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">LinkedIn link</td>                
+                    <td id="linkedin_display">
+                        linkedin
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th">Instagrsm link</td>
+                    <td id="instagram_display">
+                        instagram
+                    </td>
+                </tr>
+                
+            </table>
+
+        </div>
+
     </div>
+
+    
+    <script>
+        document.getElementById("information_div").style.display = 'none';
+    </script>
 
     <footer>
 

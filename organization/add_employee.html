@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/organization.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="/js/add_employee.js"></script>
     <title>Add Employee</title>
 </head>
 <body>
@@ -36,109 +39,130 @@
 
         <form id="employee_form">
 
-            <h2>Add Employee details</h2>
+            <h2 align="center">Add Employee details</h2>
             
-            <h3 id="success_message" class="success_message"></h3>
+            <!-- <h3 id="success_message" class="success_message"></h3> -->
             <!--this is for success message after registration that your organization code is sent to your provided email-->
 
             <table>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="first_name">Firstname:</label>
                     </td>
                     <td>
-                        <input type="text" name="first_name" id="first_name">
+                        <input id="first_name" type="text" name="first_name" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="last_name">Lastname:</label>
                     </td>
                     <td>
-                        <input type="text" name="last_name" id="last_name">
+                        <input id="last_name" type="text" name="last_name" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="email">Email:</label>
                     </td>
                     <td>
-                        <input type="email" name="email" id="email">
+                        <input id="email" type="email" name="email" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="password">Password:</label> 
                     </td>
                     <td>
-                        <input type="password" name="password" id="password">
+                        <input id="pass" type="password" name="password" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="address">Address:</label>
                     </td>
                     <td>
-                        <textarea name="address" for="employee_form"></textarea>  
+                        <textarea id="address" name="address" for="employee_form" required></textarea>  
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="dob">Date of Birth:</label> 
                     </td>
                     <td>
-                        <input type="date" name="dob" id="dob">
+                        <input id="dob" type="date" name="dob" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="date_of_join">Date of Joining:</label> 
                     </td>
                     <td>
-                        <input type="date" name="date_of_join" id="date_of_join">
+                        <input id="doj" type="date" name="date_of_join" required>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td class="label">
                         <label for="blood_group">Blood group:</label>
                     </td>
                     <td>
-                        <input type="text" name="blood_group" id="blood_group">
+                        <input id="blood_group" type="text" name="blood_group" required>
                     </td>
                 </tr>
 
             </table>
             <br>
-
+            <button onclick="add_employee_function()" class="submit" value="submit">Submit</button>
             
         </form>
-        <a href="/organization/add_employee.html"><button value="submit" name="submit">Submit</button></a>
-
-
-    
+        <br>
+        <h3 id="success_message" class="success_message2">Employee List</h3>
+        <table id="info_table" style="margin-top: 2%;">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Date of join
+                </th>
+                <th>
+                    Delete
+                </th>
+            </tr>
+            
+        </table>
     </div>
 
     <footer>
-        
-        <!-- Logo of website in center of the page -->
 
-        <p>Follow us <!-- wesite name --> on these websites</p>
-        <nav>
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-        <p>© Copyright 2020. All Rights Reserved.</p>
-        <p>Developer: Jwalit Shah</p>
+        <div>
+            <img id="footer_logo" src="/images/mainlogo.png">
+        </div>
+
+        <div id="footer_content">
+            <p class="footer_content_center">Follow us on these websites</p>
+            <div id="footer_links">
+                <a href="#"><i class="fa fa-user-circle-o" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-linkedin" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
+                <a href="#"><i class="fa fa-facebook" style="color: white;"></i></a>
+            </div>
+            <div class="footer_content_center">
+                <p>© Copyright 2020. All Rights Reserved.</p>
+                <p>Developer: Jwalit Shah</p><br>
+            </div>
+        </div>
     </footer>
 
 </body>
