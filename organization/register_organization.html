@@ -4,18 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Organization Login</title>
+    <title>Organization Registration</title>
     <link rel="stylesheet" type="text/css" href="/css/main_login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/yourcode.js"></script>
     <script src="/js/organization_registration.js"></script>
-    
+    <link rel="icon" href="/images/mainlogo.png">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 
 
 <body>
 
     <header>
+
+        <!-- <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="#">Expand at md</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+                aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExample04">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdown04">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-md-0">
+                    <input class="form-control" type="text" placeholder="Search">
+                </form>
+            </div>
+        </nav>
 
         <nav id="top_navbar">
             <ul>
@@ -24,38 +70,105 @@
                 <li class="left_nav"><a href="/organization/login_organization.html">Organization Login</a></li>
                 <li class="left_nav"><a href="/employee/login_employee.html">Employee Login</a></li>
             </ul>
+        </nav> -->
+
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid"><a class="navbar-brand" href="#" style="color: white;"><img class="logo" src="/images/mainlogo.png"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><i class="fa fa-bars fa-2x" style="color:white" aria-hidden="true"></i></button>
+                <div class="collapse navbar-collapse"
+                    id="navcol-1">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="/index.html">Back to the Main page</a></li>
+                        <li class="nav-item"><a href="/employee/login_employee.html">Employee Login</a></li>
+                        <li class="nav-item"><a href="/organization/login_organization.html">Organization Login</a></li>
+                        <li class="nav-item active"><a href="/organization/register_organization.html">Organization Registration</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
     </header>
 
+    <div class="container">
+        <div class="card shadow-lg o-hidden border-0 my-5" style="border-radius: 40px;">
+            <div class="card-body p-0">
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-flex">
+                        <div class="flex-grow-1 bg-register-image" style="background-image:url('/images/laptop-3d.jpg'); border-radius: 40px;"></div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h4 class="text-dark mb-4">Create an Organization Account!</h4>
+                            </div>
+                            <form class="user" enctype="multipart/form-data">
+                                <div class="form-group"><input type="text" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="org_name" placeholder="Organzation Name" name="org_name" required/></div>
+                                <div class="form-group"><input type="text" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="dir_name" placeholder="Director Name" name="dir_name" required/></div>
 
-    <div id="wrapper">
+                                <!-- <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input style="box-shadow: 0px 0px 1px;" type="text" class="form-control form-control-user" id="DirectorFirstName" placeholder="Director First Name" name="director_first_name" /></div>
+                                    <div class="col-sm-6"><input type="text" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="DirectorLastName" placeholder="Director Last Name" name="director_last_name" /></div>
+                                </div> -->
+
+                                <div class="form-group"><input type="email" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="us" aria-describedby="emailHelp" placeholder="Email Address" name="email" required/></div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0"><input type="password" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="pass" placeholder="Password" name="password" required/></div>
+                                    <div class="col-sm-6"><input type="password" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="pass_reset" placeholder="Repeat Password" name="password_repeat" required/></div>
+                                </div>
+                                <div class="form-group"><input type="tel" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="mob" placeholder="Mobile Number" name="mobile" required/></div>
+                                <div class="form-group"><input type="url" pattern="https?://.+" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="web_link" placeholder="Website Link" name="url" required/></div>
+                                <div class="form-group"><input type="url" pattern="https?://.+" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="facebook_link" placeholder="Facebook Link" name="url" required/></div>
+                                <div class="form-group"><input type="url" pattern="https?://.+" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="linkedin_link" placeholder="Linkedin Link" name="url" required/></div>
+                                <div class="form-group"><input type="url" pattern="https?://.+" style="box-shadow: 0px 0px 1px;" class="form-control form-control-user" id="instagram_link" placeholder="Insagram Link" name="url" required/></div>
+                                <div class="form-group"><input type="file" style="box-shadow: 0px 0px 1px;" id="org_logo" placeholder="Organization Logo"/></div>
+                                <br>
+                                <button class="btn btn-primary btn-block text-white btn-user" onclick="submit_organization_registration()" type="submit">Register Account</button>
+                                <button class="btn btn-primary btn-block text-white btn-user"><a href="/organization/dashboard_organization.html" style="color: white;">Go Without JS</a></button>
+                                <hr />
+                                <hr />
+                            </form>
+                            <div class="text-center"><a class="small" href="forgot-password.html">Forgot Password?</a></div>
+                            <div class="text-center"><a class="small" href="/organization/login_organization.html">Already have an account? Login!</a></div>
+                            <div class="text-center"><a class="small" href="/employee/login_employee.html">Are You Employee? Login!</a></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="wrapper" class="container-fluid">
 
 
-        <div class="main">
+        <!-- <div class="main">
             <p class="msg1" id="success_after_registration1" align="center"></p>
             <p class="msg1" align="center"></p>
             <p class="msg1" align="center">Organization Registration</p>
             <form class="form1" enctype="multipart/form-data">
                 <input class="org_name" id="org_name" type="text" placeholder="Organization name" required>
-                <input class="dir_name" id="dir_name" type="text" placeholder="Director name" required> 
-                <input class="us" id="us" type="email" align="center" name="email" placeholder="Username / Email" required>
+                <input class="dir_name" id="dir_name" type="text" placeholder="Director name" required>
+                <input class="us" id="us" type="email" align="center" name="email" placeholder="Username / Email"
+                    required>
                 <input class="pass" id="pass" type="password" align="center" placeholder="Password" required>
                 <input class="mob" id="mob" type="tel" name="phone" placeholder="Mobile number" required>
-                <input class="web_link" id="web_link" type="url" pattern="https?://.+" placeholder="Website address" name="url" required>
-                <input class="facebook_link" id="facebook_link" type="url" pattern="https?://.+" placeholder="Facebook profile address" name="url" required>
-                <input class="linkedin_link" id="linkedin_link" type="url" pattern="https?://.+" placeholder="LinkedIn profile address" name="url" required>
-                <input class="instagram_link" id="instagram_link" type="url" pattern="https?://.+" placeholder="Instagram profile address" name="url" required>
+                <input class="web_link" id="web_link" type="url" pattern="https?://.+" placeholder="Website address"
+                    name="url" required>
+                <input class="facebook_link" id="facebook_link" type="url" pattern="https?://.+"
+                    placeholder="Facebook profile address" name="url" required>
+                <input class="linkedin_link" id="linkedin_link" type="url" pattern="https?://.+"
+                    placeholder="LinkedIn profile address" name="url" required>
+                <input class="instagram_link" id="instagram_link" type="url" pattern="https?://.+"
+                    placeholder="Instagram profile address" name="url" required>
                 <input class="org_logo" type="file" id="org_logo" placeholder="Upload company Logo" required><br><br>
-                <input align="center" onclick="submit_organization_registration()" class="submit" type="submit" value="submit with js"><br><br>
+                <input align="center" onclick="submit_organization_registration()" class="submit" type="submit"
+                    value="submit with js"><br><br>
                 <a class="submit" href="/organization/dashboard_organization.html" align="center">go without Js</a>
 
-                <!-- <p class="forgot" align="center"><a href="/forgot_password.html">Forgot Password?</a></p> -->
             </form>
             <p class="org_Registration inner_nav" style="margin-top: 30px;"><a
                     href="/organization/login_organization.html">Organization Login</a></p>
             <p class="emp_Login inner_nav"><a href="/employee/login_employee.html">Employee Login</a></p>
-        </div>
+        </div> -->
 
         <div id="information_div" class="main" style="width: 80%; margin-top: 5%">
             <p class="msg1" id="success_after_registration2" align="center"></p>
@@ -98,7 +211,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="th">LinkedIn link</td>                
+                    <td class="th">LinkedIn link</td>
                     <td id="linkedin_display">
                         linkedin
                     </td>
@@ -109,14 +222,14 @@
                         instagram
                     </td>
                 </tr>
-                
+
             </table>
 
         </div>
 
     </div>
 
-    
+
     <script>
         document.getElementById("information_div").style.display = 'none';
     </script>

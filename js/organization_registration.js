@@ -16,10 +16,6 @@ function submit_organization_registration() {
     //     return;
     // }
     inf_div.style.display = 'block';
-    succ_1.innerHTML = "Registered successfully go down for details";
-    succ_1.style.color = "green";
-    succ_2.innerHTML = "Registered successfully";
-    succ_2.style.color = "green";
     document.getElementById("org_name_display").innerHTML = name.value;
     document.getElementById("dir_name_display").innerHTML = dir_name.value;
     document.getElementById("email_display").innerHTML = email.value;

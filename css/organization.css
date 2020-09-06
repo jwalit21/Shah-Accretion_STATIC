@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    text-decoration: none;
+    text-decoration: none !important;
     list-style: none;
     /* box-sizing: border-box; */
 }
@@ -22,21 +22,21 @@
         color: red;
     }
 
-    table {
+    /* table {
         width: 88%;
         margin-top: 4%;
         margin-bottom: 3%;
         margin-left: 6%;
         margin-right: 6%;
         overflow: hidden;
-    }
+    } */
 
     .label{
         color: white;
         background-color: #003452;
     }
 
-    th{
+    /* th{
         background-color: #003452;
         color: white;
     }
@@ -56,7 +56,7 @@
 
     td:nth-child(even) {
         background-color:  #f3f0f0;
-    }
+    } */
 
 
 

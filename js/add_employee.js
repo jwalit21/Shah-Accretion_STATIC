@@ -14,7 +14,7 @@ function add_employee_function() {
         alert("Please provide all information");
         return;
     }
-    
+
     var tr = document.createElement("tr");
     tr.className = "inside_row";
     var td1 = document.createElement("td");
