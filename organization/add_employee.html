@@ -2,28 +2,347 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/css/organization.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/add_employee.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Add Employee</title>
+
+    <link rel="stylesheet" href="/assets/bootsrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+
+    <link rel="stylesheet" href="/css/dashboard_organization.css">
+    <script src="/js/add_employee.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
 </head>
 
-<body>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion pl-0 bg-own">
+            <div class="container-fluid d-flex p-0">
+                <a class="navbar-brand shadow-lg d-flex justify-content-center align-items-center sidebar-brand m-1 ml-3" href="#">
+                    <div class="sidebar-brand-icon">
+                        <img class="rounded-circle img-fluid w-50 h-50" src="/images/mainlogo.png" alt="Profile">
+                    </div>
 
-    <header>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-1">
+                <ul class="nav navbar-nav text-light mt-0" id="accordionSidebar">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/organization/dashboard_organization.html">
+                            <i class="fas fa-bars"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" data-toggle="dropdown" aria-expanded="false" href="#">
+                            <i class="fas fa-user"></i>
+                            <span>Employee</span>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="/organization/list_of_employee_organization.html">
+                                <i class="fas fa-users"></i>
+                                <span>&nbsp; Manage Employees</span>
+                            </a>
+                            <a class="dropdown-item border rounded-bottom" role="presentation" href="/organization/add_employee.html">
+                                <i class="fas fa-user-plus"></i>
+                                <span>&nbsp; Add Employee</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/organization/salary-role_organization.html">
+                            <i class="fas fa-dollar"></i>
+                            <span>Salary-Role Schema</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/organization/to-do_organization.html">
+                            <i class="far fa-calendar-check-o"></i>
+                            <span>To-Do</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-address-card"></i>
+                            <span>General Forrum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-feed"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            
+            <div id="content">
+                
+                <nav class="navbar navbar-light navbar-expand shadow shadow-lg mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <!--mr-auto ml-md-3 my-2 my-md-0 mw-100-->
+                        <form class="form-inline d-none d-sm-inline-block navbar-search">
+                            <div class="input-group">
+                                <input class="border-1 form-control small border-0" type="text" placeholder="Search for ...">
+                                <div class="input-group-append">
+                                    <button class="btn py-0" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
+
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown d-sm-none">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="mr-auto navbar-search w-100">
+                                        <div class="input-group">
+                                            <input class="form-control border-0" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <i class="fas fa-envelope fa-fw"></i>
+                                        <span class="badge badge-danger badge-counter">7</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header"></h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <!-- <div class="dropdown-list-image mr-3">
+                                                <img class="rounded-circle" src="/images/proffesional_profile.jpg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div> -->
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate">
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </div>
+                                                <p class="small text-gray-500 mb-0"></p>
+                                            </div>
+                                        </a>
+                                        <a class="text-center dropdown-item small text-gray-500" href="#"></a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <div class="d-sm-block topbar-divider"></div>
+
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small"> Jwalit Shah </span>
+                                        <img class="border rounded-circle img-profile" src="/images/proffesional_profile.jpg" alt="Profile">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right animated--grow-in">
+                                        <a class="dropdown-item" role="presentation" href="#">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> &nbsp;Profile
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" role="presentation" href="/organization/login_organization.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> &nbsp;Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">Add Employee</h3>
+                        <a class="btn btn-danger btn-sm d-sm-inline-block" role="button" href="/organization/list_of_employee_organization.html">
+                            <i class="fas fa-backward fa-sm text-white-50"></i>
+                            Back
+                        </a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="card border shadow bg-light" style=" margin-top: 2%;">
+                                <div class="p-3 pt-4 card-header" style="background-color: #003542; color:white">
+                                    <h5 class="text-center">Add Employee Details</h5>
+                                </div>
+                                <div class="card-body">
+                                    <!--was-validated-->
+                                    <form id="employee_form" class="form-horizontal">
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="first_name">First Name</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="first_name" class="form-control" id="first_name"
+                                                    placeholder="Enter First Name" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="last_name">Last Name</label>
+                                            <div class="col-sm-6">
+                                                <input type="text" name="last_name" class="form-control" id="last_name"
+                                                    placeholder="Enter Last Name" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="email">E-mail</label>
+                                            <div class="col-sm-6">
+                                                <input type="email" name="email" class="form-control" id="email"
+                                                    placeholder="Enter Email Address" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="password">Password</label>
+                                            <div class="col-sm-6">
+                                                <input type="password" name="password" class="form-control" id="pass"
+                                                    placeholder="Enter Password" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please enter password.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="address">Address</label>
+                                            <div class="col-sm-8">
+                                                <textarea name="address" class="form-control" id="address"
+                                                    placeholder="Enter Residental Address" required></textarea>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please fill out this field.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="dob">Date of Birth</label>
+                                            <div class="col-sm-4">
+                                                <input type="date" name="dob" class="form-control" id="dob" placeholder="Please select Date"
+                                                    required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please select date.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="date_of_join">Date of Join</label>
+                                            <div class="col-sm-4">
+                                                <input type="date" name="date_of_join" class="form-control" id="doj"
+                                                    placeholder="Please select Date" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please select date.</div>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="form-group">
+                                            <label class="control-label col-sm-2" for="blood_group">Blood Group</label>
+                                            <div class="col-sm-3">
+                                                <input type="text" name="blood_group" class="form-control" id="blood_group"
+                                                    placeholder="Blood group" required>
+                                                <div class="valid-feedback">Valid.</div>
+                                                <div class="invalid-feedback">Please provide blood group.</div>
+                                            </div>
+                                        </div>
+                                        <br>
+                    
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-2 col-sm-10">
+                                                <button type="submit" onclick="add_employee_function()" class="btn btn-primary"
+                                                    value="submit">Submit</button>
+                                                <button type="reset" class="btn btn-danger">Clear</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                    
+                                </div>
+                            </div>
+                        </div>
+                        <!--we can put the second column here-->
+                    </div>
+                    <br><hr><br>
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                            <div class="card border shadow mb-5">
+                                <h3 id="success_message" class="card-header text-left">Employee List</h3>
+                                <table id="info_table" class="table table-hover">
+                                    <tr style="background-color: #003542; color:white;">
+                                        <th>
+                                            Name
+                                        </th>
+                                        <th>
+                                            Email
+                                        </th>
+                                        <th>
+                                            Date of join
+                                        </th>
+                                        <th>
+                                            Delete
+                                        </th>
+                                    </tr>
+                
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer>
+                <div id="footer_content" class="container-fluid">
+                    <!-- <div class="pt-1" style="background-color:#dad8d84f;"></div> -->
+                    <p class="footer_content_center pt-5">Follow us on these websites</p>
+                    <div id="footer_links">
+                        <a href="#"><i class="fa fa-user-circle-o text-own"></i></a>
+                        <a href="#"><i class="fa fa-linkedin text-own"></i></a>
+                        <a href="#"><i class="fa fa-instagram text-own"></i></a>
+                        <a href="#"><i class="fa fa-facebook text-own"></i></a>
+                    </div>
+                    <div class="footer_content_center">
+                        <p>© Copyright 2020. All Rights Reserved.</p>
+                        <p>Developer: Jwalit Shah</p><br>
+                    </div>
+                    <!-- <div class="pt-1" style="background-color:#dad8d84f;"></div> -->
+                </div>
+            </footer>
+
+        </div><a class="border rounded-circle d-inline scroll-to-top" href="#page-top"><i class="fas fa-arrow-up"></i></a>
+    </div>
+    <!-- <header>
 
         <nav id="top_navbar">
             <ul>
@@ -41,111 +360,13 @@
             </ul>
         </nav>
 
-    </header>
+    </header> -->
 
     <div class="content container">
 
 
 
-        <div class="card bg-light" style=" margin-top: 2%;">
-            <div class="p-3 pt-4 card-header" style="background-color: #003542; color:white">
-                <h5 class="text-center">Add Employee Details</h5>
-            </div>
-            <div class="card-body">
-
-                <form id="employee_form" class="form-horizontal was-validated">
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="first_name">First Name</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="first_name" class="form-control" id="first_name"
-                                placeholder="Enter First Name" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="last_name">Last Name</label>
-                        <div class="col-sm-6">
-                            <input type="text" name="last_name" class="form-control" id="last_name"
-                                placeholder="Enter Last Name" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="email">E-mail</label>
-                        <div class="col-sm-6">
-                            <input type="email" name="email" class="form-control" id="email"
-                                placeholder="Enter Email Address" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="password">Password</label>
-                        <div class="col-sm-6">
-                            <input type="password" name="password" class="form-control" id="pass"
-                                placeholder="Enter Password" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please enter password.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="address">Address</label>
-                        <div class="col-sm-8">
-                            <textarea name="address" class="form-control" id="address"
-                                placeholder="Enter Residental Address" required></textarea>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please fill out this field.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="dob">Date of Birth</label>
-                        <div class="col-sm-4">
-                            <input type="date" name="dob" class="form-control" id="dob" placeholder="Please select Date"
-                                required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please select date.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="date_of_join">Date of Join</label>
-                        <div class="col-sm-4">
-                            <input type="date" name="date_of_join" class="form-control" id="doj"
-                                placeholder="Please select Date" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please select date.</div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="control-label col-sm-2" for="blood_group">Blood Group</label>
-                        <div class="col-sm-3">
-                            <input type="text" name="blood_group" class="form-control" id="blood_group"
-                                placeholder="Blood group" required>
-                            <div class="valid-feedback">Valid.</div>
-                            <div class="invalid-feedback">Please provide blood group.</div>
-                        </div>
-                    </div>
-                    <br>
-
-                    <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <button type="submit" onclick="add_employee_function()" class="btn btn-primary"
-                                value="submit">Submit</button>
-                            <button type="reset" class="btn btn-danger">Clear</button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
-        </div>
+        
 
         <!-- 
         <form id="employee_form">
@@ -232,48 +453,8 @@
 
         </form> -->
         <br>
-        <div class="card mb-5">
-            <h3 id="success_message" class="card-header text-left">Employee List</h3>
-            <table id="info_table" class="table table-hover">
-                <tr style="background-color: #003542; color:white;">
-                    <th>
-                        Name
-                    </th>
-                    <th>
-                        Email
-                    </th>
-                    <th>
-                        Date of join
-                    </th>
-                    <th>
-                        Delete
-                    </th>
-                </tr>
-
-            </table>
-        </div>
     </div>
 
-    <footer>
-
-        <div>
-            <img id="footer_logo" src="/images/mainlogo.png">
-        </div>
-
-        <div id="footer_content">
-            <p class="footer_content_center">Follow us on these websites</p>
-            <div id="footer_links">
-                <a href="#"><i class="fa fa-user-circle-o" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-linkedin" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-instagram" style="color: white;"></i></a>
-                <a href="#"><i class="fa fa-facebook" style="color: white;"></i></a>
-            </div>
-            <div class="footer_content_center">
-                <p>© Copyright 2020. All Rights Reserved.</p>
-                <p>Developer: Jwalit Shah</p><br>
-            </div>
-        </div>
-    </footer>
 
 </body>
 
