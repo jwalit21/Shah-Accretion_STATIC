@@ -2,113 +2,306 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salary-role</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>To-Do</title>
+
+    <link rel="stylesheet" href="/assets/bootsrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+
+    <link rel="stylesheet" href="/css/dashboard_organization.css">
+    <script src="/js/add_employee.js"></script>
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
 </head>
 
-<body>
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar align-items-start sidebar sidebar-dark accordion pl-0 bg-own">
+            <div class="container-fluid d-flex p-0">
+                <a class="navbar-brand shadow-lg d-flex justify-content-center align-items-center sidebar-brand m-1 ml-3" href="#">
+                    <div class="sidebar-brand-icon">
+                        <img class="rounded-circle img-fluid w-50 h-50" src="/images/mainlogo.png" alt="Profile">
+                    </div>
 
-    <header>
-        <nav>
-            <!-- all information of organization -->
-            <!-- Logo of organization -->
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
+                    <div class="sidebar-brand-text mx-3"><span>Brand</span></div>
+                </a>
+                <hr class="sidebar-divider my-1">
+                <ul class="nav navbar-nav text-light mt-0" id="accordionSidebar">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/organization/dashboard_organization.html">
+                            <i class="fas fa-bars"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false" href="#">
+                            <i class="fas fa-user"></i>
+                            <span>Employee</span>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" role="presentation" href="/organization/list_of_employee_organization.html">
+                                <i class="fas fa-users"></i>
+                                <span>&nbsp; Manage Employees</span>
+                            </a>
+                            <a class="dropdown-item" role="presentation" href="/organization/add_employee.html">
+                                <i class="fas fa-user-plus"></i>
+                                <span>&nbsp; Add Employee</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/organization/salary-role_organization.html">
+                            <i class="fas fa-dollar"></i>
+                            <span>Salary-Role Schema</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/organization/to-do_organization.html">
+                            <i class="far fa-calendar-check-o"></i>
+                            <span>To-Do</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-address-card"></i>
+                            <span>General Forrum</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-feed"></i>
+                            <span>Feedback</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
         </nav>
-    </header>
-
-    <aside>
-
-        <nav class="sidebar_employee">
-            <span>Hello Orgnization</span>
-            <a href="/organization/dashboard_organization.html">Home</a><br>
-            <a href="/organization/list_of_employee_organization.html">Employee</a><br>
-            <a href="/organization//salary-role_organization.html">Salary-Role Schema</a><br>
-            <a href="/organization/to-do_organization.html">To-Do</a><br>
-            <a href="#">FAQs-Feedback</a><br>
-            <a href="#">General Forrum</a><br>
-            <a href="/organization/update_organization_organization.html">Orgnization profile</a><br>
-            <a href="/index.html">Logout</a><br>
-        </nav>
-
-    </aside>
-
-    <div class="content">
-
-
-        
-
-            <h3>Assign To-dos</h3>
-
-            <h3 id="success_message" class="success_message"></h3>
-            <!--this is for success message after registration that your organization code is sent to your provided email-->     
-            <form id="to-do_form">
-
-                <table>
-
-                    <tr>
-                        <td>
-                            <label for="employee_select">Employee:</label>
-                        </td>
-                        <td>
-                            <select id="employee_select" name="employee_select">
-                                <option value="xyz1">xyz11</option>
-                                <option value="xyz12">xyz12</option>
-                                <option value="xyz13">xyz13</option>
-                                <option value="xyz14">xyz14</option>
-                            </select>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <label for="to-do">To-Do:</label>
-                        </td>
-                        <td>
-                            <textarea id="to-do" name="to-do" for="to-do_form"></textarea>  
-                        </td>                        
-                    </tr>
-
-                    <tr>
-                        <td>
-                            <label for="deadline">Deadline:</label> 
-                        </td>
-                        <td>
-                            <input type="date" name="deadline" id="deadline">
-                        </td>
-                    </tr>
-
-                </table>
-
-                <!-- <input type="reset" value="Reset" name="reset"> -->
-
-            </form>
-            <a href="/organization/dashboard_organization.html" ><button value="submit" name="submit">Submit</button></a>
+        <div class="d-flex flex-column" id="content-wrapper">
             
+            <div id="content">
+                
+                <nav class="navbar navbar-light navbar-expand shadow shadow-lg mb-4 topbar static-top">
+                    <div class="container-fluid">
+                        <!--mr-auto ml-md-3 my-2 my-md-0 mw-100-->
+                        <form class="form-inline d-none d-sm-inline-block navbar-search">
+                            <div class="input-group">
+                                <input class="border-1 form-control small border-0" type="text" placeholder="Search for ...">
+                                <div class="input-group-append">
+                                    <button class="btn py-0" type="button">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
 
+                        <ul class="nav navbar-nav flex-nowrap ml-auto">
 
+                            <div class="d-none d-sm-block topbar-divider"></div>
+                            <li class="nav-item dropdown d-sm-none">
+                                <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                    <i class="fas fa-search"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right p-3 animated--grow-in" role="menu"
+                                    aria-labelledby="searchDropdown">
+                                    <form class="mr-auto navbar-search w-100">
+                                        <div class="input-group">
+                                            <input class="form-control border-0" type="text" placeholder="Search for ...">
+                                            <div class="input-group-append">
+                                                <button class="btn btn-primary py-0" type="button">
+                                                    <i class="fas fa-search"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </li>
+                            
+                            <li class="nav-item dropdown no-arrow mx-1">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <i class="fas fa-envelope fa-fw"></i>
+                                        <span class="badge badge-danger badge-counter">7</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-list animated--grow-in">
+                                        <h6 class="dropdown-header"></h6>
+                                        <a class="d-flex align-items-center dropdown-item" href="#">
+                                            <!-- <div class="dropdown-list-image mr-3">
+                                                <img class="rounded-circle" src="/images/proffesional_profile.jpg">
+                                                <div class="bg-success status-indicator"></div>
+                                            </div> -->
+                                            <div class="font-weight-bold">
+                                                <div class="text-truncate">
+                                                    <span>
+                                                        
+                                                    </span>
+                                                </div>
+                                                <p class="small text-gray-500 mb-0"></p>
+                                            </div>
+                                        </a>
+                                        <a class="text-center dropdown-item small text-gray-500" href="#"></a>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                            <div class="d-sm-block topbar-divider"></div>
 
+                            <li class="nav-item dropdown no-arrow">
+                                <div class="nav-item dropdown no-arrow">
+                                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">
+                                        <span class="d-none d-lg-inline mr-2 text-gray-600 small"> Jwalit Shah </span>
+                                        <img class="border rounded-circle img-profile" src="/images/proffesional_profile.jpg" alt="Profile">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right animated--grow-in">
+                                        <a class="dropdown-item" role="presentation" href="#">
+                                            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i> &nbsp;Profile
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" role="presentation" href="/organization/login_organization.html">
+                                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> &nbsp;Logout
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container-fluid">
+                    <div class="d-sm-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-dark mb-0">To-Do Lists</h3>
+                        <button class="btn btn-primary btn-sm d-sm-inline-block" type="button" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-calendar-plus fa-sm text-white-50"></i>
+                            Assign To-Do Here
+                        </button>
+                    </div>
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header bg-own">
+                                    <h5 class="modal-title" style="color:white;" id="exampleModalLabel">Assign To-Do</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true" style="color:white;">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form action="#" id="form1">
+                                        <div class="form-group">
+                                            <label for="select_employee">Select Employee</label>
+                                            <select class="form-control" name="select_employee" id="select_emoloyee">
+                                                <option value="Employee 1">Employee 1</option>
+                                                <option value="Employee 2">Employee 2</option>
+                                                <option value="Employee 3">Employee 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="todo" class="col-form-label">To-Do</label>
+                                            <textarea class="form-control" name="todo" id="todo"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="due_date" class="col-form-label"></label>
+                                            <input type="date" name="due_date" class="form-control" id="due_date">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button id="save_todo" type="button" class="btn btn-primary">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <table class="table" id="to-do_table">
+                            <thead class="thead bg-own">
+                                <tr>
+                                    <th scope="col" style="color: white;">Employee Name</th>
+                                    <th scope="col" style="color: white;">To-Do</th>
+                                    <th scope="col" style="color: white;">Due Date</th>
+                                    <th scope="col" style="color: white;">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_body">
+
+                            </tbody>
+                        </table>
+                        <!--we can put the second column here-->
+                    </div>
+                    <br><hr><br>
+                    <div class="row">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <footer>
+                <div id="footer_content" class="container-fluid">
+                    <!-- <div class="pt-1" style="background-color:#dad8d84f;"></div> -->
+                    <p class="footer_content_center pt-5">Follow us on these websites</p>
+                    <div id="footer_links">
+                        <a href="#"><i class="fa fa-user-circle-o text-own"></i></a>
+                        <a href="#"><i class="fa fa-linkedin text-own"></i></a>
+                        <a href="#"><i class="fa fa-instagram text-own"></i></a>
+                        <a href="#"><i class="fa fa-facebook text-own"></i></a>
+                    </div>
+                    <div class="footer_content_center">
+                        <p>© Copyright 2020. All Rights Reserved.</p>
+                        <p>Developer: Jwalit Shah</p><br>
+                    </div>
+                    <!-- <div class="pt-1" style="background-color:#dad8d84f;"></div> -->
+                </div>
+            </footer>
+            <div id="output"></div>
+
+        </div><a class="border rounded-circle d-inline scroll-to-top" href="#page-top"><i class="fas fa-arrow-up"></i></a>
     </div>
 
-    <footer>
 
-        <!-- Logo of website in center of the page -->
-
-        <p>Follow us
-            <!-- wesite name --> on these websites</p>
-        <nav>
-            <a href="#">Website</a>
-            <a href="#">LinkedIn</a>
-            <a href="#">Instagram</a>
-            <a href="#">facebook</a>
-        </nav>
-        <p>© Copyright 2020. All Rights Reserved.</p>
-        <p>Developer: Jwalit Shah</p>
-    </footer>
 
 </body>
 
 </html>
+
+
+<script>
+    $(document).ready(
+        $('#save_todo').click(
+            function(){
+                
+                console.log($('#form1').serializeArray());
+
+                var x = $("#form1").serializeArray(); 
+                var emp,duedate,todo;
+                $.each(x, function(i, field) { 
+                    var name=field.name;
+                    if(name=="due_date")
+                        duedate=field.value;
+                    else if(name=="todo")
+                        todo=field.value;
+                    else
+                        emp=field.value;
+                });
+                var tr1=$('<tr></tr>');
+                var td1=$('<td>'+emp+'</td>'+'<td>'+todo+'</td>'+'<td>'+duedate+'</td>');
+                var button= $('<td><button class="btn btn-danger border btn-sm rounded">Delete</button></td>');
+                tr1.append(td1,button);
+                $("#table_body").append(tr1);
+            }
+        )
+    );
+</script>
