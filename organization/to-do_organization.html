@@ -187,13 +187,13 @@
                 <div class="container-fluid">
                     <div class="d-sm-flex justify-content-between align-items-center mb-4">
                         <h3 class="text-dark mb-0">To-Do Lists</h3>
-                        <button class="btn btn-primary btn-sm d-sm-inline-block" type="button" data-toggle="modal" data-target="#exampleModal">
+                        <button class="btn btn-primary btn-sm d-sm-inline-block" type="button" data-toggle="modal" data-target="#todo_modal">
                             <i class="fas fa-calendar-plus fa-sm text-white-50"></i>
                             Assign To-Do Here
                         </button>
                     </div>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="todo_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header bg-own">
@@ -223,8 +223,8 @@
                                     </form>
                                 </div>
                                 <div class="modal-footer">
+                                    <button id="save_todo" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button id="save_todo" type="button" class="btn btn-primary">Save</button>
                                 </div>
                             </div>
                         </div>
@@ -306,6 +306,7 @@
                 var button= $('<td><button class="btn btn-danger border btn-sm rounded">Delete</button></td>');
                 tr1.append(td1,button);
                 $("#table_body").append(tr1);
+                $('#todo_modal').modal('hide');
             }
         )
     );
